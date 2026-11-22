@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Databases and backups: they hold members' contacts. Never commit them.
+data/
+backups/
+*.db
+*.db-wal
+*.db-shm
+
+# Local settings and secrets
+.env
+.env.*
+.claude/
+.DS_Store

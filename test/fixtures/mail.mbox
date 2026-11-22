@@ -1,0 +1,38 @@
+From 1789000000000000001@xxx Mon Jan 05 10:00:00 +0000 2026
+X-GM-THRID: 1789000000000000001
+X-Gmail-Labels: Inbox
+Date: Mon, 05 Jan 2026 10:00:00 +0000
+From: "Wexley, Rosalind" <rosalind.wexley@cedarvalley.example>
+To: Owner Person <owner@myco.example>,
+ "Tamsin O'Rourke" <tamsin@ozarkhealth.example>
+Cc: =?UTF-8?Q?Jos=C3=A9_Arbelo?= <jose.arbelo@heartlandag.example>, notifications@saas.example
+Subject: Pilot follow-up
+Content-Type: text/plain; charset=UTF-8
+
+Hi all,
+From: Secret Bodyperson <secret.body@hidden.example>
+To: Another Hidden <another.hidden@hidden.example>
+Call me at 603-555-0101.
+
+>From the archives: this line is escaped and must be ignored.
+
+From 1789000000000000002@xxx Tue Jan 06 10:00:00 +0000 2026
+From: Owner Person <owner@myco.example>
+To: Rosalind Wexley <rosalind.wexley@cedarvalley.example>
+Subject: Re: Pilot follow-up
+Content-Type: multipart/alternative; boundary="b1"
+
+--b1
+Content-Type: text/plain
+
+From: Body Only <body.only@hidden.example>
+Cc: Also Hidden <also.hidden@hidden.example>
+--b1--
+
+From 1789000000000000003@xxx Wed Jan 07 10:00:00 +0000 2026
+From: =?UTF-8?B?Um9zYWxpbmQgV2V4bGV5?= <rosalind.wexley@cedarvalley.example>
+To: owner@myco.example
+Cc: undisclosed-recipients:;
+Subject: Third
+
+Body text here.

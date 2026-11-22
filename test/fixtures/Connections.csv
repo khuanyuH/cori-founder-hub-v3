@@ -1,0 +1,9 @@
+Notes:
+"When exporting your connection data, you may notice that some of the email addresses are missing. This is a synthetic test file."
+
+First Name,Last Name,URL,Email Address,Company,Position,Connected On
+Ada,Quillfeather,https://www.linkedin.com/in/ada-quillfeather-9f2c,,Granite Peaks Dental,Office Manager,19 Apr 2026
+Bastian,Morrowind,https://www.linkedin.com/in/bastian-morrowind/,bastian@heartlandseed.example,Heartland Seed Fund,Managing Partner,03 Jan 2024
+Cora,Penhallow,http://linkedin.com/in/Cora-Penhallow?trk=abc,,"Northeast Dental Supply Co., Inc.",VP Sales,28 Feb 2023
+,,https://www.linkedin.com/in/unknown-123,,Hidden Co,Member,01 Mar 2022
+Dmitri,Ashgrove,https://www.linkedin.com/in/dmitri-ashgrove,,,,15 Dec 2021

@@ -1,0 +1,27 @@
+# Render Blueprint for the CORI Founder Hub. See DEPLOY.md for the steps.
+# One web service with a persistent disk: the whole database is one SQLite file on that disk.
+# A disk allows one instance only, and each deploy restarts the site for a few seconds.
+services:
+  - type: web
+    name: cori-founder-hub
+    runtime: node
+    plan: starter               # the smallest plan that can attach a disk
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: false           # deploy by hand from the dashboard, as the legislation tracker does
+    disk:
+      name: founder-hub-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION       # the hub uses the built-in node:sqlite module
+        value: "24.12.0"
+      - key: HUB_DB
+        value: /var/data/hub.db
+      - key: HUB_TRUST_PROXY    # Render ends HTTPS at its proxy; this gives the session cookie its Secure flag
+        value: "1"
+      - key: HUB_MAX_UPLOAD_MB  # uploads are held in memory; the starter plan has 512 MB
+        value: "50"
+      - key: HUB_INVITE_CODE    # sign-up asks for this code; set it in the dashboard, share it with members only
+        sync: false

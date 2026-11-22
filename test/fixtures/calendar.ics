@@ -1,0 +1,38 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Synthetic//Test//EN
+X-WR-CALNAME:owner@myco.example
+BEGIN:VEVENT
+UID:e1@test
+DTSTART:20260105T150000Z
+SUMMARY:Pilot kickoff
+ORGANIZER;CN=Owner Person:mailto:owner@myco.example
+ATTENDEE;CN=Lucinda Farrowby;ROLE=REQ-PARTICIPANT:mailto:lucinda@nhdental.example
+ATTENDEE;CN=Lucinda Farrowby;ROLE=REQ-PARTICIPANT:mailto:lucinda@nhdental.example
+ATTENDEE;CN="Quist, Marlon";PARTSTAT=ACCEPTED:mailto:marlon.quist@gmail.com
+ATTENDEE;CN=noreply@calendar.example:mailto:noreply@calendar.example
+END:VEVENT
+BEGIN:VEVENT
+UID:e2@test
+DTSTART;VALUE=DATE:20260212
+ORGANIZER;CN=Lucinda Farrowby:mailto:lucinda@nhdental.example
+ATTENDEE;CN=Owner Person:mailto:owner@myco.example
+ATTENDEE;CN=Theo Brackwater;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;X-NUM-GUESTS=0:mai
+ lto:theo@prairie-implement.example
+ATTENDEE:mailto:nameless@somewhere.example
+ATTENDEE;CN=jane.doe@corp.example:mailto:jane.doe@corp.example
+END:VEVENT
+BEGIN:VEVENT
+UID:e3@test
+DTSTART:20251120T090000
+ORGANIZER;CN=Owner Person:mailto:owner@myco.example
+ATTENDEE;CN=Lucinda Farrowby:mailto:LUCINDA@nhdental.example
+ATTENDEE;CN=Theo Brackwater:mailto:theo@prairie-implement.example
+END:VEVENT
+BEGIN:VEVENT
+UID:e4@test
+DTSTART:20260301T090000Z
+ATTENDEE;CN=Lucinda Farrowby:mailto:lucinda@nhdental.example
+ATTENDEE;CN=Lucinda Farrowby:mailto:lucinda@nhdental.example
+END:VEVENT
+END:VCALENDAR

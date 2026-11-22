@@ -1,0 +1,32 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Kasimir Delavanne
+N:Delavanne;Kasimir;;;
+ORG:Granite Hills Community Bank;Commercial Lending
+TITLE:VP Commercial Lending and Small Business Relationship Manag
+ er for the Seacoast Region
+EMAIL;TYPE=INTERNET,WORK:kasimir@granitehills.example
+TEL;TYPE=CELL:+1 603 555 0188
+item1.URL:https\://www.linkedin.com/in/kasimir-delavanne
+ADR;TYPE=WORK:;;1 Main St;Portsmouth;NH;03801;USA
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+N;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:Ren=C3=A9e;Lumi=C3=A8re;;;
+FN;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:Lumi=C3=A8re Ren=C3=
+=A9e
+ORG:Northern Lakes School District
+TITLE:Superintendent
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+EMAIL:orphan@nowhere.example
+TEL:555-0100
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+N:Strand;Moira;;Dr.;
+ORG:Tug Fork Medical Center
+TITLE:Chief Medical Officer
+NOTE:Personal cell 304-555-0177 call after 6
+END:VCARD
