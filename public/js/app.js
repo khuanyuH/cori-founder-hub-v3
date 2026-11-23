@@ -52,6 +52,7 @@ const TITLES = {
 };
 
 const main = document.getElementById('main');
+const nudgeEl = document.getElementById('import-nudge');
 const navEl = document.getElementById('main-nav');
 const userEl = document.getElementById('user-menu');
 let renderSeq = 0;
@@ -75,6 +76,7 @@ export function navigate(hash, { replace: rep = false } = {}) {
 function renderHeader() {
   const r = parseHash();
   document.body.classList.toggle('signed-out', !state.me);
+  renderImportNudge();
   if (!state.me) { replace(userEl); replace(navEl); return; }
   const m = state.me.member;
   const pending = pendingIncomingCount();
@@ -98,6 +100,24 @@ function renderHeader() {
       h('button', { type: 'button', class: 'menu-out', onclick: doSignOut }, 'Sign out')));
   menu.addEventListener('click', (e) => { if (e.target.closest('a')) menu.open = false; });
   replace(userEl, menu);
+}
+
+/** A reminder on every tab until the member adds LinkedIn connections. Hidden inside the import wizard itself. */
+function renderImportNudge() {
+  const r = parseHash();
+  const bySource = state.me?.stats?.by_source || {};
+  const show = Boolean(state.me) && !bySource.linkedin && r.name !== 'import' && r.name !== 'signin';
+  nudgeEl.hidden = !show;
+  if (!show) { replace(nudgeEl); return; }
+  const others = Number(state.me.stats.connections) > 0;
+  replace(nudgeEl,
+    h('div', { class: 'import-nudge-inner', role: 'region', 'aria-label': 'Add your LinkedIn connections' },
+      h('div', { class: 'import-nudge-text' },
+        h('strong', null, 'You have not added your LinkedIn connections yet.'),
+        h('span', null, others
+          ? ' LinkedIn is the largest source of introductions for most members. The hub walks you through each step.'
+          : ' The hub works only when members share their networks. Founders cannot find an introduction through you until you do. The hub walks you through each step.')),
+      h('a', { class: 'btn btn-primary', href: '#/import/linkedin' }, 'Add LinkedIn connections')));
 }
 
 async function doSignOut() {

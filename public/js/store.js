@@ -23,6 +23,8 @@ export async function refreshMe() {
   try {
     state.me = await api('/me', { quiet401: true });
     state.memberId = state.me.member.id;
+    // The shell listens for this (for example to show or hide the LinkedIn import reminder).
+    window.dispatchEvent(new Event('hub:me-changed'));
     return state.me;
   } catch (err) {
     if (err.status === 401) { reset(); return null; }

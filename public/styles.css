@@ -642,3 +642,10 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus, p[tabindex="-1"]:focus { outli
   .vote { width: 2.6rem; }
   .search-form .btn { padding-left: 1rem; padding-right: 1rem; }
 }
+
+/* Reminder to add LinkedIn connections: shown under the masthead on every tab until the member imports. */
+#import-nudge { background: var(--hi); border-bottom: var(--border); color: var(--cori-deep); }
+.import-nudge-inner { max-width: var(--wrap); margin: 0 auto; padding: .8rem var(--pad); display: flex; align-items: center; gap: 1rem 1.5rem; flex-wrap: wrap; }
+.import-nudge-text { flex: 1 1 22rem; font-size: .95rem; line-height: 1.45; }
+.import-nudge-inner .btn { flex: none; }
+.import-nudge-inner .btn-primary:hover { background: var(--cori-cream); color: var(--cori-deep); }
